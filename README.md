@@ -1,6 +1,8 @@
-Tutorial: https://youtu.be/4aYvLz4E1Ts?si=j3yNa1hPhW8-gqit
+## Credits : [Engineering Digest](https://www.youtube.com/@EngineeringDigest)
 
-Notes: https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
+### Tutorial: https://youtu.be/4aYvLz4E1Ts?si=j3yNa1hPhW8-gqit
+
+### Notes: https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
 
 ---
 
