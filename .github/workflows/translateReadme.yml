@@ -1,4 +1,8 @@
 name: Translate English
+# https://github.com/ephraimduncan/translate-readme/blob/main/package.json
+
+permissions:
+  contents: write
 
 on:
   push:
@@ -10,10 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        # keep credentials so git push uses the token
+        persist-credentials: true
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 12.x
+        node-version: 18
     # ISO Language Codes: https://cloud.google.com/translate/docs/languages
     - name: Kotygoroshko - English
       uses: OstrikovG/translate-readme@main
