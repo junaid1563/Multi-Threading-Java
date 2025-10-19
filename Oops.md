@@ -2,18 +2,19 @@
 
 # YES
 
--   [What's happened_YES_?](#Что-такое-ООП)
--   [What are the basic principles?_YES_.](#Назовите-основные-принципы-ООП)
--   [What's happened_"encapsulation"_?](#Что-такое-инкапсуляция)
--   [What's happened_"inheritance"_?](#Что-такое-наследование)
--   [What's happened_"polymorphism"_?](#Что-такое-полиморфизм)
--   [What's happened_"abstraction"_?](#Что-такое-абстракция)
--   [What is_"messaging"_?](#Что-представляет-собой-обмен-сообщениями)
--   [Tell us about the basic concepts of OOP:_"Class"_,_"object"_,_"interface"_.](#Расскажите-про-основные-понятия-ООП-класс-объект-интерфейс)
--   [What are the advantages and disadvantages of the object-oriented approach to programming?](#В-чем-заключаются-преимущества-и-недостатки-объектно-ориентированного-подхода-в-программировании)
--   [What do expressions mean in terms of OOP principles?_"is"_And_"has"_?](#Что-подразумевают-в-плане-принципов-ООП-выражения-является-и-имеет)
--   [What is the difference between_composition_And_aggregation_?](#В-чем-разница-между-композицией-и-агрегацией)
--   [What's happened_static_And_dynamic linking_?](#Что-такое-статическое-и-динамическое-связывание)
+
+- [What's happened_YES_?](#whats-happened_yes_)
+- [What are the basic principles?_YES_.](#what-are-the-basic-principles_yes_)
+- [What's happened_"encapsulation"_?](#whats-happened_encapsulation_)
+- [What's happened_"inheritance"_?](#whats-happened_inheritance_)
+- [What's happened_"polymorphism"_?](#whats-happened_polymorphism_)
+- [What's happened_"abstraction"_?](#whats-happened_abstraction_)
+- [What is_"messaging"_?](#what-is_messaging_)
+- [Tell us about the basic concepts of OOP:_"Class"_,_"object"_,_"interface"_.](#tell-us-about-the-basic-concepts-of-oop_class_object_interface_)
+- [What are the advantages and disadvantages of the object-oriented approach to programming?](#what-are-the-advantages-and-disadvantages-of-the-object-oriented-approach-to-programming)
+- [What do expressions mean in terms of OOP principles?_"is"_And_"has"_?](#what-do-expressions-mean-in-terms-of-oop-principles_is_and_has_)
+- [What is the difference between_composition_And_aggregation_?](#what-is-the-difference-between_composition_and_aggregation_)
+- [What's happened_static_And_dynamic linking_?](#whats-happened_static_and_dynamic-linking_)
 
 ## What's happened_YES_?
 
