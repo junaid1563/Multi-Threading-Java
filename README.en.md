@@ -1,10 +1,10 @@
-## Credits : [Engineering Digest](https://www.youtube.com/@EngineeringDigest)
+## Credits :[Engineering Digest](https://www.youtube.com/@EngineeringDigest)
 
-### Tutorial: https://youtu.be/4aYvLz4E1Ts?si=j3yNa1hPhW8-gqit
+### Tutorial:<https://youtu.be/4aYvLz4E1Ts?si=j3yNa1hPhW8-gqit>
 
-### Notes: https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
+### Notes:<https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6>
 
----
+* * *
 
 ## CPU
 
@@ -58,19 +58,19 @@ In a multi-core system, both threads and processes can run in true parallel on d
 
 ## Time Slicing
 
-**Definition:** Time slicing divides CPU time into small intervals called time slices or quanta.
+**Definition:**Time slicing divides CPU time into small intervals called time slices or quanta.
 
-**Function:** The OS scheduler allocates these time slices to different processes and threads, ensuring each gets a fair share of CPU time.
+**Function:**The OS scheduler allocates these time slices to different processes and threads, ensuring each gets a fair share of CPU time.
 
-**Purpose:** This prevents any single process or thread from monopolizing the CPU, improving responsiveness and enabling concurrent execution.
+**Purpose:**This prevents any single process or thread from monopolizing the CPU, improving responsiveness and enabling concurrent execution.
 
 ## Context Switching
 
-**Definition:** Context switching is the process of saving the state of a currently running process or thread and loading the state of the next one to be executed.
+**Definition:**Context switching is the process of saving the state of a currently running process or thread and loading the state of the next one to be executed.
 
-**Function:** When a process or thread’s time slice expires, the OS scheduler performs a context switch to move the CPU’s focus to another process or thread.
+**Function:**When a process or thread’s time slice expires, the OS scheduler performs a context switch to move the CPU’s focus to another process or thread.
 
-**Purpose:** This allows multiple processes and threads to share the CPU, giving the appearance of simultaneous execution on a single-core CPU or improving parallelism on multi-core CPUs.
+**Purpose:**This allows multiple processes and threads to share the CPU, giving the appearance of simultaneous execution on a single-core CPU or improving parallelism on multi-core CPUs.
 
 Multitasking can be achieved through multithreading where each task is divided into threads that are managed concurrently.
 
@@ -80,7 +80,7 @@ While multitasking typically refers to the running of multiple applications, mul
 
 Java provides robust support for multithreading, allowing developers to create applications that can perform multiple tasks simultaneously, improving performance and responsiveness.
 
-In Java, multithreading is the concurrent execution of two or more threads to maximize the utilization of the CPU. Java’s multithreading capabilities are part of the `java.lang` package, making it easy to implement concurrent execution.
+In Java, multithreading is the concurrent execution of two or more threads to maximize the utilization of the CPU. Java’s multithreading capabilities are part of the`java.lang`package, making it easy to implement concurrent execution.
 
 ### Single-core environment
 
@@ -96,9 +96,9 @@ The JVM can distribute threads across multiple cores, allowing true parallel exe
 
 ### Thread basics
 
-A thread is a lightweight process, the smallest unit of processing. Java supports multithreading through its `Thread` class and the `Runnable` interface.
+A thread is a lightweight process, the smallest unit of processing. Java supports multithreading through its`Thread`class and the`Runnable`interface.
 
-When a Java program starts, one thread begins running immediately, which is called the main thread. This thread is responsible for executing the `main` method of a program.
+When a Java program starts, one thread begins running immediately, which is called the main thread. This thread is responsible for executing the`main`method of a program.
 
 ```java
 public class Test {
@@ -110,15 +110,15 @@ public class Test {
 
 ### Creating threads
 
-To create a new thread in Java, you can either extend the `Thread` class or implement the `Runnable` interface.
+To create a new thread in Java, you can either extend the`Thread`class or implement the`Runnable`interface.
 
 #### Method 1: extend the Thread class
 
-A new class `World` is created that extends `Thread`.
+A new class`World`is created that extends`Thread`.
 
-The `run` method is overridden to define the code that constitutes the new thread.
+The`run`method is overridden to define the code that constitutes the new thread.
 
-`start` method is called to initiate the new thread.
+`start`method is called to initiate the new thread.
 
 ```java
 public class Test {
@@ -143,13 +143,13 @@ public class World extends Thread {
 
 #### Method 2: implement Runnable
 
-A new class `World` is created that implements `Runnable`.
+A new class`World`is created that implements`Runnable`.
 
-The `run` method is overridden to define the code that constitutes the new thread.
+The`run`method is overridden to define the code that constitutes the new thread.
 
-A `Thread` object is created by passing an instance of `World`.
+A`Thread`object is created by passing an instance of`World`.
 
-`start` method is called on the `Thread` object to initiate the new thread.
+`start`method is called on the`Thread`object to initiate the new thread.
 
 ```java
 public class Test {
@@ -179,11 +179,11 @@ The lifecycle of a thread in Java consists of several states, which a thread can
 
 ### States
 
-- **New:** A thread is in this state when it is created but not yet started.
-- **Runnable:** After the `start` method is called, the thread becomes runnable. It’s ready to run and is waiting for CPU time.
-- **Running:** The thread is in this state when it is executing.
-- **Blocked/Waiting:** A thread is in this state when it is waiting for a resource or for another thread to perform an action.
-- **Terminated:** A thread is in this state when it has finished executing.
+-   **New:**A thread is in this state when it is created but not yet started.
+-   **Runnable:**After the`start`method is called, the thread becomes runnable. It’s ready to run and is waiting for CPU time.
+-   **Running:**The thread is in this state when it is executing.
+-   **Blocked/Waiting:**A thread is in this state when it is waiting for a resource or for another thread to perform an action.
+-   **Terminated:**A thread is in this state when it has finished executing.
 
 ```java
 public class MyThread extends Thread{
@@ -212,15 +212,15 @@ public class MyThread extends Thread{
 
 ## Runnable vs Thread
 
-Use `Runnable` when you want to separate the task from the thread, allowing the class to extend another class if needed. Extend `Thread` if you need to override `Thread` methods or if the task inherently requires direct control over the thread itself, though this limits inheritance.
+Use`Runnable`when you want to separate the task from the thread, allowing the class to extend another class if needed. Extend`Thread`if you need to override`Thread`methods or if the task inherently requires direct control over the thread itself, though this limits inheritance.
 
 ### Common thread methods
 
-- `start()`: Begins the execution of the thread. The JVM calls the `run()` method of the thread.
-- `run()`: The entry point for the thread. When the thread is started, the `run()` method is invoked. If the thread was created using a class that implements `Runnable`, the `run()` method will execute the `run()` method of that `Runnable` object.
-- `sleep(long millis)`: Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds.
-- `join()`: Waits for this thread to die. When one thread calls the `join()` method of another thread, it pauses the execution of the current thread until the thread being joined has completed its execution.
-- `setPriority(int newPriority)`: Changes the priority of the thread. The priority is a value between `Thread.MIN_PRIORITY` (1) and `Thread.MAX_PRIORITY` (10).
+-   `start()`: Begins the execution of the thread. The JVM calls the`run()`method of the thread.
+-   `run()`: The entry point for the thread. When the thread is started, the`run()`method is invoked. If the thread was created using a class that implements`Runnable`, the`run()`method will execute the`run()`method of that`Runnable`object.
+-   `sleep(long millis)`: Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds.
+-   `join()`: Waits for this thread to die. When one thread calls the`join()`method of another thread, it pauses the execution of the current thread until the thread being joined has completed its execution.
+-   `setPriority(int newPriority)`: Changes the priority of the thread. The priority is a value between`Thread.MIN_PRIORITY`(1) and`Thread.MAX_PRIORITY`(10).
 
 ```java
 public class MyThread extends Thread {
@@ -259,11 +259,11 @@ public class MyThread extends Thread {
 
 ### interrupt()
 
-Interrupts the thread. If the thread is blocked in a call to `wait()`, `sleep()`, or `join()`, it will throw an `InterruptedException`.
+Interrupts the thread. If the thread is blocked in a call to`wait()`,`sleep()`, or`join()`, it will throw an`InterruptedException`.
 
 ### yield()
 
-`Thread.yield()` is a static method that suggests the current thread temporarily pause its execution to allow other threads of the same or higher priority to execute. It’s important to note that `yield()` is just a hint to the thread scheduler, and the actual behavior may vary depending on the JVM and OS.
+`Thread.yield()`is a static method that suggests the current thread temporarily pause its execution to allow other threads of the same or higher priority to execute. It’s important to note that`yield()`is just a hint to the thread scheduler, and the actual behavior may vary depending on the JVM and OS.
 
 ```java
 public class MyThread extends Thread {
@@ -286,7 +286,7 @@ public class MyThread extends Thread {
 
 ### setDaemon(boolean)
 
-`Thread.setDaemon(true)` marks the thread as a daemon thread. When the JVM exits, all daemon threads are terminated.
+`Thread.setDaemon(true)`marks the thread as a daemon thread. When the JVM exits, all daemon threads are terminated.
 
 ```java
 public class MyThread extends Thread {
@@ -356,11 +356,11 @@ public class MyThread extends Thread {
 }
 ```
 
-The output of the code is not 2000 because the `increment` method in the `Counter` class is not synchronized. This results in a race condition when both threads try to increment the `count` variable concurrently.
+The output of the code is not 2000 because the`increment`method in the`Counter`class is not synchronized. This results in a race condition when both threads try to increment the`count`variable concurrently.
 
-Without synchronization, one thread might read the value of `count` before the other thread has finished writing its incremented value. This can lead to both threads reading the same value, incrementing it, and writing it back, effectively losing one of the increments.
+Without synchronization, one thread might read the value of`count`before the other thread has finished writing its incremented value. This can lead to both threads reading the same value, incrementing it, and writing it back, effectively losing one of the increments.
 
-We can fix this by using the `synchronized` keyword:
+We can fix this by using the`synchronized`keyword:
 
 ```java
 class Counter {
@@ -376,11 +376,11 @@ class Counter {
 }
 ```
 
-By synchronizing the `increment` method, you ensure that only one thread can execute this method at a time, which prevents the race condition. With this change, the output will consistently be 2000.
+By synchronizing the`increment`method, you ensure that only one thread can execute this method at a time, which prevents the race condition. With this change, the output will consistently be 2000.
 
 ## Locks
 
-The `synchronized` keyword in Java provides basic thread-safety but has limitations: it locks the entire method or block, leading to potential performance issues. It lacks a try-lock mechanism, causing threads to block indefinitely, increasing the risk of deadlocks. Additionally, `synchronized` doesn't support multiple condition variables, offering only a single monitor per object with basic wait/notify mechanisms. In contrast, explicit locks (`Lock` interface) offer finer-grained control, try-lock capabilities to avoid blocking, and more sophisticated thread coordination through multiple condition variables, making them more flexible and powerful for complex concurrency scenarios.
+The`synchronized`keyword in Java provides basic thread-safety but has limitations: it locks the entire method or block, leading to potential performance issues. It lacks a try-lock mechanism, causing threads to block indefinitely, increasing the risk of deadlocks. Additionally,`synchronized`doesn't support multiple condition variables, offering only a single monitor per object with basic wait/notify mechanisms. In contrast, explicit locks (`Lock`interface) offer finer-grained control, try-lock capabilities to avoid blocking, and more sophisticated thread coordination through multiple condition variables, making them more flexible and powerful for complex concurrency scenarios.
 
 ```java
 import java.util.concurrent.TimeUnit;
@@ -439,7 +439,7 @@ public class Main {
 
 ### Reentrant lock
 
-A Reentrant Lock in Java is a type of lock that allows a thread to acquire the same lock multiple times without causing a deadlock. If a thread already holds the lock, it can re-enter the lock without being blocked. This is useful when a thread needs to repeatedly enter synchronized blocks or methods within the same execution flow. The `ReentrantLock` class from the `java.util.concurrent.locks` package provides this functionality, offering more flexibility than the `synchronized` keyword, including try-locking, timed locking, and multiple condition variables for advanced thread coordination.
+A Reentrant Lock in Java is a type of lock that allows a thread to acquire the same lock multiple times without causing a deadlock. If a thread already holds the lock, it can re-enter the lock without being blocked. This is useful when a thread needs to repeatedly enter synchronized blocks or methods within the same execution flow. The`ReentrantLock`class from the`java.util.concurrent.locks`package provides this functionality, offering more flexibility than the`synchronized`keyword, including try-locking, timed locking, and multiple condition variables for advanced thread coordination.
 
 ```java
 public class ReentrantExample {
@@ -503,7 +503,7 @@ Acquires the lock unless the current thread is interrupted. This is useful when 
 
 ## Read-write lock
 
-A Read-Write Lock is a concurrency control mechanism that allows multiple threads to read shared data simultaneously while restricting write access to a single thread at a time. This lock type, provided by the `ReentrantReadWriteLock` class in Java, optimizes performance in scenarios with frequent read operations and infrequent writes. Multiple readers can acquire the read lock without blocking each other, but when a thread needs to write, it must acquire the write lock, ensuring exclusive access. This prevents data inconsistency while improving read efficiency compared to traditional locks, which block all access during write operations.
+A Read-Write Lock is a concurrency control mechanism that allows multiple threads to read shared data simultaneously while restricting write access to a single thread at a time. This lock type, provided by the`ReentrantReadWriteLock`class in Java, optimizes performance in scenarios with frequent read operations and infrequent writes. Multiple readers can acquire the read lock without blocking each other, but when a thread needs to write, it must acquire the write lock, ensuring exclusive access. This prevents data inconsistency while improving read efficiency compared to traditional locks, which block all access during write operations.
 
 ```java
 import java.util.concurrent.locks.Lock;
@@ -798,15 +798,15 @@ public class ThreadCommunication {
 
 ## Executors framework
 
-The Executors framework was introduced in Java 5 as part of the `java.util.concurrent` package to simplify the development of concurrent applications by abstracting away many of the complexities involved in creating and managing threads.
+The Executors framework was introduced in Java 5 as part of the`java.util.concurrent`package to simplify the development of concurrent applications by abstracting away many of the complexities involved in creating and managing threads.
 
 ### Benefits
 
-- Avoiding manual thread management
-- Resource management
-- Scalability
-- Thread reuse
-- Error handling
+-   Avoiding manual thread management
+-   Resource management
+-   Scalability
+-   Thread reuse
+-   Error handling
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -874,13 +874,11 @@ public class Main {
 
 Output:
 
-```
-Hello
+    Hello
 
-null
+    null
 
-Task is done !
-```
+    Task is done !
 
 ```java
 import java.util.concurrent.ExecutionException;
@@ -903,11 +901,9 @@ public class MainCallable {
 
 Output:
 
-```
-Hello
+    Hello
 
-Task is done !
-```
+    Task is done !
 
 ## Atomic classes
 
@@ -1028,6 +1024,7 @@ class DependentService implements Callable<String> {
 }
 
 ```
+
 Output:
 
 pool-1-thread-3 service started.
@@ -1037,7 +1034,8 @@ pool-1-thread-2 service started.
 pool-1-thread-1 service started.
 
 Main
-```
+
+````
 
 ## CyclicBarrier
 
@@ -1088,5 +1086,6 @@ class Subsystem implements Runnable {
         }
     }
 }
-```
+````
+
         this.initializationTime = initializationTime;
